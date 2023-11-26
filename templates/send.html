@@ -1,0 +1,8 @@
+<input type="text" name="msg" autofocus>
+<button type="submit">Send</button>
+{{ if not .HasMsg }}
+{{ "<!-- You can't send an empty message. -->" | safeHTML }}
+{{- end -}}
+{{ if not .HasParam }}
+{{ "<!-- You need to pass the message with the msg key, like so: msg=hi -->" | safeHTML }}
+{{ end }}

@@ -1,0 +1,4 @@
+{{ if . }}
+<div>{{ . }}</div>
+{{ end }}
+<div hx-get="/poll" hx-trigger="load" hx-swap="outerHTML"></div>
